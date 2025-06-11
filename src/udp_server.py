@@ -14,8 +14,8 @@ while True:
     msg, addr = server.recvfrom(1024)
     if addr not in clients:
         clients.add(addr)
-        print(f"V {addr} joined.")
-    print(f"🟡 {addr}: {msg.decode('utf-8')}")
+        print(f"❗️ {addr} joined.")
+    print(f"✉️ {addr}: {msg.decode('utf-8')}")
     
     # broadcast to all clients
     for client in clients:

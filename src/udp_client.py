@@ -34,6 +34,8 @@ def send():
 # 실시간 스트리밍, 게임에서 자주 사용 -> 약간의 데이터가 빠져도 인경 안 쓰는 상황에서.
 
 # How to improve? -> client가 종료하기 전에 특수 메시지를 전송해서 server쪽에서는 그 특수메시지를 보고 client제거 가능.
+# TCP -> 연결형(connection-oriented) 프로토콜  연결이 성공해야 통신 가능
+# UDP -> 비연결형(connectionless) 프로토콜  연결 없이 통신 가능
 
 threading.Thread(target=receive).start()
 threading.Thread(target=send).start()
